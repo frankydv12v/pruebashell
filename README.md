@@ -25,7 +25,7 @@ A continuación se da una descripción de diferentes funciones que le permitirá
 
 Estos archivos contienen la definición de las funciones ([`archivo.h`](archivo.h)) y su correspondiente implementación ([`archivo.c`](archivo.c)).
 Al interior de [`archivo.h`](archivo.h) se encuntra una descripción corta de las funciones y de los parámetros que estas reciben. 
-Así mismo, el archivo [`archivo_main.c`](archivo_main.c) tiene un programa en C que genera una aplicación donde se muestra como se pueden usar las funciones definidas e implementadas en `archivo.h` y `archivo.c`, respectivamente.
+Así mismo, el archivo [`archivo_main.c`](archivo_main.c) tiene un programa en C el cual es una aplicación que evidencia el uso de las funciones definidas e implementadas en `archivo.h` y `archivo.c`, respectivamente.
 
 Para ver en operación las funciones se ejecuta el comando
 
