@@ -10,25 +10,26 @@
 
 int main(int argc, char *argv[]) 
 { 
-	int socket, connfd;  
-	int puerto;
-	char *filename;
-	char ack[MAX_TCP_ACK] = {0};
+    int socket, connfd;  
+    int puerto;
+    char *filename;
+    char ack[MAX_TCP_ACK] = {0};
 
-	if (argc != 3) {
-		printf("Uso: %s <puerto> <archivo>\n",argv[0]);
-		return 1;
-	}
-	
-	puerto = atoi(argv[1]);
-	filename = argv[2];
+    if (argc != 3) {
+        printf("Uso: %s <puerto> <archivo>\n",argv[0]);
+        return 1;
+    }
 
-	socket = TCP_Server_Open(puerto);
-	connfd = TCP_Accept(socket);
+    puerto = atoi(argv[1]);
+    filename = argv[2];
 
-	TCP_Write_String(connfd, filename); Recv_ACK(connfd);
-	TCP_Send_File(connfd,filename);
+    socket = TCP_Server_Open(puerto);
+    connfd = TCP_Accept(socket);
 
-	close(socket); 
+    TCP_Write_String(connfd, filename); 
+    Recv_ACK(connfd);
+    TCP_Send_File(connfd,filename);
+
+    close(socket); 
 } 
 
